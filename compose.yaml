@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  garmin_api:
+    build: ./garmin-api
+    container_name: fastapi-application
+  nginx:
+    restart: always
+    image: nginx:1-alpine
+    ports:
+      - 8089:80
+    volumes:
+      - ./static_html_homepage/:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
