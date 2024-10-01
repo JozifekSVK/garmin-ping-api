@@ -1,2 +1,11 @@
+.DS_Store
+__pycache__/*
+
 nginx_secrets/*
 user_conf.d/*
+
+data/ch_data/*
+data/ch_logs/*
+data/FIT_files/*
+
+garmin-api/app/__pycache__
